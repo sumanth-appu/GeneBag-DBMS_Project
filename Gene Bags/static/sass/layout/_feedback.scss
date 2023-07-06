@@ -1,0 +1,158 @@
+.feedback-container{
+ width: 80%;
+ height: 150vh;
+
+padding: 5rem 0;
+margin: 2rem 0;
+margin: 0 10rem;
+
+   }
+   .swiper{
+    width:80%;
+    height: 100vh;
+    box-shadow: 0 1rem 2rem $color-white;
+    position: relative;
+   }
+   .swiper-slide img{
+    width: 100%;
+   
+   }
+   .position{
+
+    text-align: justify;
+    
+    position: absolute;
+    top:25vh;
+    left: 30vh;
+   }
+
+   .form__radio-group{
+    display: inline;
+    width: 50%;
+   }
+   .form__radio-label{
+     font-size: 2rem;
+     text-transform: uppercase;
+   }
+   .questions{
+    position: absolute;
+    top:50%;
+    left: 20%;
+   }
+
+   .feedback__input{
+    font-size: 2rem;
+    font-family: inherit;
+    color: $color-chocolate;
+    width: 20rem;
+
+   }
+   .popup{
+    width: 100;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000000,0.8);
+    z-index: 9999;
+    transition: all 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+   
+
+    &__content{
+        @include abscenter;
+        width: 75%;
+        height: 50rem;
+
+        background-color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-Shadow, 0.25);
+    }
+
+    &__login{
+        background-image:linear-gradient(110deg,rgba($color-white,0.9) 0%,
+        rgba($color-white,0.9) 60%,
+        rgba(255, 166, 0, 0) 40%) ,url(../images/background1.1.jpg);
+        background-size: 100%;
+        height: 50rem;
+        border-radius: 3px;
+        box-shadow: 0 1rem 2rem rgba($color-Shadow,0.85);
+        position: relative;
+
+        &__form{
+            width: 60%;
+            padding: 6rem;
+            position: absolute;
+            top: 30vh;
+            left: 40vh;
+            box-shadow: 0 2rem 4rem rgba($color-white,0.85);
+
+        }
+
+       
+    }
+    &__form{
+        width: 60%;
+        padding: 6rem;
+        
+
+        &__group :not(:last-child){
+            margin-top: 2rem;
+            
+        }
+
+        &__input{
+            font-size: 2rem;
+            font-family: inherit;
+            color: $color-chocolate;
+            padding: 1.5rem 2rem;
+            border-radius: .2rem;
+            background-color: rgba($color-white,1);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 60%;
+            display: block;
+
+            &:focus{
+                outline: none;
+                box-shadow: 0 1rem 1.5rem rgba($color-Shadow,0.1) ;
+                border-bottom: 3px solid $color-vaild;
+            }
+
+            &:focus:invalid{
+                border-bottom:3px solid $color-primary ;
+            }
+            &::-webkit-input-placeholder{
+                color: $color-chocolate;
+            }
+           
+        }
+        &__label{
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 2rem;
+            margin-top: 0.7rem;
+            display: block;
+            transition: all .3s;
+
+        }
+        &__input:placeholder-shown + &__label{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+
+        }
+       
+        
+        }
+        
+    }
+
+
+  

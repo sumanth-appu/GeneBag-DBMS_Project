@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+        <section class="section_signup">
+            {% include "_messages.html" %}
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                   create Account
+                </h2>
+            </div>
+
+                <div class="signin__login__form">
+                    <form action="#" action="/signup" method="post" class="form">
+                        <a href="/login" class="signin__close"> &larr;</a>
+                        
+                       
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="user_name " id ="user_name" name="user_name" required>
+                            <label for="user_name" class="signin__form__label"> user_name</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="Email " id ="Email"
+                            name="email" required>
+                            <label for="Email" class="signin__form__label"> email</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="password" class="signin__form__input" placeholder="password " id ="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required>
+                            <label for="password" class="signin__form__label"> password</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="password" class="signin__form__input" placeholder="confirm password " id ="confirm password" name="confirm_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required>
+                            <label for="confirm password" class="signin__form__label"> confirm password</label>
+                        </div>
+                       
+    
+                        <button class="btn btn--white">
+                            register
+                        
+                        </button>
+                        
+                    </form>
+                   </div>
+           
+        </section>
+       
+    </body>
+
+    {% endblock %}
+
+
+
+
+    

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<section class="section_payment">
+	<div class="u-center-text">
+		<h2 class="heading-secondary">Payment</h2>
+	</div>
+	<div class="Payment-continer">
+		 <div class="row" style="width:80%;border-bottom: 2px solid #fff;height:25%">
+		 	<div class="col-2-of-3" style="height:20vh" >
+                    <div class="Payment-price">
+						<h4>PRICE OF THE ITEM </h4> 
+					</div>	
+					<div class="Payment-price">
+						<h4>TAXS </h4> 
+					</div>
+                    </div>
+                    <div class="col-1-of-3" style="height:20vh">
+                       <div class="Payment-price">
+						<h4>{{total | safe}}$</h4> 
+					</div>
+					   <div class="Payment-price">
+						<h4> {{int(total * 0.18)}}$</h4> 
+					</div>
+                    </div>
+                </div>
+	<div class="row" style="height:20vh">
+				<div class="col-2-of-3" style="height:20vh" >
+                    <div class="Payment-price">
+						<h4>Grand Total : </h4> 
+					</div>	
+					
+                    </div>
+					<div class="col-1-of-3" style="height:20vh">
+						<div class="Payment-price" >
+						 <h4> {{int(total * 0.18)+int(total)}}$</h4>
+					 </div>
+                </div>
+	</div>
+	
+				<form method="POST" action="/payment">
+					<input type="hidden" name="total" value={{total}}/>
+					<input type="submit" value="Pay now" class="btn--white btn"/>
+				</form>
+	</div>
+
+               
+               
+</section>
+
+
+
+{% endblock %}

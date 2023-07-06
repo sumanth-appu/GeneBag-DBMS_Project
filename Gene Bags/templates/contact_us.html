@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        
+        <section class="section_contact">
+            <div class="u-center-text u-margin-bottom-small">
+                <h2 class="heading-secondary">
+                   contact us
+                </h2>
+            </div>
+            <div class="contact__form">
+                <form method="POST" action="/contact" class="contact_form">
+                
+                    <p class="heading_tertiary"> IN ORDER TO GET IN TOUCH WITH US , PLEASE FILL OUT THE BELOW FORM .wE WILL GET IN TOUCH WITH YOU SOON !!!!!!!</p>
+                    <div class="contact_form_group">
+                        <input type="text" class="contact__form__input" placeholder="Name" id ="user_name" name="user_name" required>
+                        <label for="user_name" class="contact__form__label">Name </label>
+                    </div>
+                    <div class="contact_form_group">
+                        <input type="text" class="contact__form__input" placeholder="place" id ="place" name="place" required>
+                        <label for="place" class="contact__form__label"> place</label>
+                    </div>
+                    <div class="contact_form_group">
+                        <input type="number" class="contact__form__input" placeholder="contact_number" id ="phone_no" name="phone_no" required>
+                        <label for="phone_no" class="contact__form__label" style="align-items: inherit;"> contact_number</label>
+                    </div>
+                    <div class="contact_form_group">
+                        <input type="text" class="contact__form__input" placeholder="mail_id" id ="email" name="email" required>
+                        <label for="email" class="contact__form__label"> mail_id</label>
+                    </div>
+                    <div class="contact_form_group">
+                        <input type="text" class="contact__form__input" placeholder="Message" id ="message" name="message" required>
+                        <label for="message" class="contact__form__label">Message</label>
+                    </div>
+
+                  <input class="btn tbn--orange" type="submit" value="Submit"/>
+
+                </form>
+            </div>
+            
+        </section>
+       
+    </body>
+
+    {% endblock %}

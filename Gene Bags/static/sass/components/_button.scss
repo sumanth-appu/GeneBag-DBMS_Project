@@ -1,0 +1,172 @@
+
+.btn{
+position: relative;
+
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase ;
+        text-decoration: none;
+        padding: 1rem 3.5rem;
+        display: inline-block;
+        border-bottom-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        position: relative;
+
+        //change for the button element 
+        border: none;
+        cursor: pointer;
+    
+    }
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 10px 20px $color-Shadow;
+
+        &::after{
+            transform:scale(1.5);
+            opacity: 0;
+        }
+
+    }
+    &:active{
+        transform: translate(-0.1rem);
+        box-shadow: 0 5px 10px  $color-Shadow;
+    }
+    &--orange{
+        background-color:$color-white;
+        color: $color-chocolate;
+
+        &::after{
+            background-color:$color-white;
+        }
+    
+    }
+    &--white
+    {
+        background-color:$color-chocolate;
+        color:$color-white ;
+        border-radius: 5rem;
+
+        &::after{
+            background-color:$color-chocolate;
+            border-radius: 5rem;
+            
+
+        }
+    
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-bottom-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        
+    }
+  
+ 
+    &--anime{
+        animation-name: moveInbottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &_signup{
+        width: 30%;
+        position: absolute;
+        top: 29.5rem;
+        left: 20rem;
+
+    }
+    &-text{
+        
+        position: absolute;
+        top: 29.5rem;
+        left: 50rem;
+
+    
+        &:link,
+        &:visited{
+            font-size: $default-fontsize;
+            color: $color-white;
+            border-radius: 0.25rem;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px solid $color-chocolate;
+            padding:3px;
+            transition: all 0.3s;
+    
+    
+        }
+        &:hover{
+            background-color: $color-white;
+            color: $color-chocolate;
+            box-shadow: 0 1rem 2rem  $color-Shadow;
+            transform: translateY(-0.05rem);
+    
+        }
+        &:active{
+            box-shadow: 0 .5rem 1rem  $color-Shadow;
+            transform: translateY(0);
+    
+        }
+    
+    }
+    &_rm-itm{
+        position: absolute;
+        top:2rem;
+        right: 2rem;
+    }
+    &-details{
+        text-decoration: none;
+        color: $color-white;
+        font-size:small;
+        font-family: inherit;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $color-chocolate;
+        padding: .8rem;
+        padding-left:2rem ;
+        padding-right: 2rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 600rem;
+
+
+        &,
+        &:link,
+        &:visited{
+          
+           
+            position: relative;
+    
+            //change for the button element 
+          
+            cursor: pointer;
+        
+        }
+        &:hover{
+            transform: translateY(-0.3rem);
+            box-shadow: 0 10px 20px $color-white;
+    
+            &::after{
+                transform:scale(1.5);
+                opacity: 0;
+            }
+    
+        }
+        &:active{
+            transform: translate(-0.1rem);
+            box-shadow: 0 5px 10px  $color-Shadow;
+        }
+    }    
+    
+
+}

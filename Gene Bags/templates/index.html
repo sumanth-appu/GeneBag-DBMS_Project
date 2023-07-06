@@ -1,0 +1,247 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+        
+         <header class="header">
+            <div class="header__logo-box">
+                <img src="{{ url_for('static', filename = 'images/Logo.png') }}" alt=" Logo" class="header__logo">
+                </div>
+            
+            <div class="header__text-box">
+               {% include "_messages.html" %}
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main"> GENEBAGS</span>
+                    <span class="heading-primary--sub"> For your daily baggage </span>
+                    
+                </h1>
+
+                <a href="/login" class="btn btn--orange btn--anime">login</a>
+
+            </div>
+            </header>
+            <main>
+
+               
+                <section class="section_collection">
+                   <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">
+                            new arrivals
+                        </h2>
+                    </div>
+                    <div class="row">
+                       
+                        <div class="col-2-of-3 row">
+                                <div class="composition">
+                                    <img src="{{ url_for('static', filename = 'images/collection-one.jpg') }}   " alt="photo1" class="composition__photo composition__photo--p1">
+                                    <img src="{{ url_for('static', filename = 'images/collection-two.jpg') }}" alt="photo2" class="composition__photo composition__photo--p2">
+                                    <img src="{{ url_for('static', filename = 'images/collection-three.jpg') }}" alt="photo3" class="composition__photo composition__photo--p3">
+                                    <img src="{{ url_for('static', filename = 'images/collection-four.jpg') }}" alt="photo3" class="composition__photo composition__photo--p4">
+                                    <img src="{{ url_for('static', filename = 'images/collection-five.jpg') }}" alt="photo3" class="composition__photo composition__photo--p5">
+                                </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-tours">
+                    <div class="length">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">
+                         more of the products 
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--1">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">American Tourister</span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">American Tourister Casual bags</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the American Tourister Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back-1">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--2">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">Mona B Noah Canvas </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Recycled Backpack </li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the NOAH Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--2">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--3">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">sky bags for bagpacks.
+                                    </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Categories: Backpacks,   LAPTOP BAGS.</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the SKYBAGS Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--3">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-tour">
+                    <div class="length">
+                    
+                    <div class="row">
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--4">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">American Tourister</span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">American Tourister Casual bags</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the American Tourister Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back-1">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--5">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">Mona B Noah Canvas </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Recycled Backpack </li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the NOAH Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--2">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--6">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span class="cards__heading-span cards__heading-span--1">sky bags for bagpacks.
+                                    </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Categories: Backpacks,   LAPTOP BAGS.</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the SKYBAGS Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--3">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+               
+            </main>
+        
+    </body>
+    
+    {% endblock %}

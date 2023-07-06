@@ -1,0 +1,14 @@
+{
+  "name": "genebags",
+  "version": "1.0.0",
+  "description": "for daily baggage",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "sumanth",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

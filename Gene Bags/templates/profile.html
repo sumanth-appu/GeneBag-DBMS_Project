@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+                    
+       
+        <section class="section_profile">
+
+
+                        
+                        
+                        <div class="navigation__list-profile">
+    
+                            <form  action="/profile"  method="post" >
+                            <img src="{{url_for('static', filename = 'images/icon/icon-user-100.png') }}" alt="">
+                            <div class="user heading__tertiary">
+                                <li class="navigation__item navigation__link">User Name: {{session['user_name']}}</li>
+                                <li class="navigation__item navigation__link">Email: {{session['email']}}</li>
+                            
+                                
+                                <button class="btn btn--white" style="position: absolute; bottom:4rem;left:4rem;">
+                                    <a href="{{url_for('logout')}}">signout</a>
+                                </button>
+                                
+                            </form>
+
+                            </div>
+                             
+                  
+                        </div> 
+                     
+                   
+                    
+                    
+                    
+            
+          
+        
+        </section>
+
+   
+
+               
+        
+    </body>
+    
+    {% endblock %}

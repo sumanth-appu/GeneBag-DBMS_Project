@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+        
+        <section class="section__login">
+            {% include "_messages.html" %}
+            <div class="u-center-text u-margin-bottom-small">
+                <h2 class="heading-secondary">
+                       login/sign_in
+                </h2>
+            </div>
+            
+            <div class="popup__login__form">
+                <form action="#" action="/login" method="post" class="form">
+                    <a href="/" class="signin__close">&times;</a>
+                    <div class="u-center-text u-margin-bottom-small">
+                        <h2 class="heading-secondary">
+                        
+                        </h2>
+                    </div>
+                   
+                    <div class="popup__form__group">
+                        <input type="text" class="popup__form__input" placeholder="user_name " id ="user_name" name="user_name" required>
+                        <label for="user_name" class="popup__form__label"> user_name</label>
+                    </div>
+                    <div class="popup__form__group">
+                        <input type="password" class="popup__form__input" placeholder="password " id ="password" name="password" required>
+                        <label for="password" class="popup__form__label"> password</label>
+                    </div>
+
+                    <button class="btn btn--white">
+                        login
+                    </button>
+                    <div class="popup_submit_btn"><a href="#" class="sign_up">Forgot password</a>  </div>
+                    <a href="/signup" class="btn-text">Sign_up &rarr;</a>                    
+                    
+                </form>
+               </div>
+                
+               
+           
+            
+            
+        </section>
+
+    <div class="signin" id="signin">
+                
+            <div class="signin__content signin__login">
+               <div class="signin__login__form">
+                <form action="#" class="form">
+                    <a href="#popup" class="signin__close"> &times;</a>
+                    <div class="u-center-text .u-margin-bottom-small">
+                        <h2 class="heading-secondary">
+                               user sign_up
+                        </h2>
+                    </div>
+                   
+                    <div class="signin__form__group">
+                        <input type="text" class="signin__form__input" placeholder="user_id " id ="user_id" required>
+                        <label for="user_id" class="signin__form__label"> user_id</label>
+                    </div>
+                    <div class="signin__form__group">
+                        <input type="text" class="signin__form__input" placeholder="Email " id ="Email" required>
+                        <label for="Email" class="signin__form__label"> Email</label>
+                    </div>
+                    <div class="signin__form__group">
+                        <input type="password" class="signin__form__input" placeholder="password " id ="password" required>
+                        <label for="password" class="signin__form__label"> password</label>
+                    </div>
+                    <div class="signin__form__group">
+                        <input type="password" class="signin__form__input" placeholder="confirm password " id ="confirm password" required>
+                        <label for="confirm password" class="signin__form__label"> confirm password</label>
+                    </div>
+                   
+
+                    <button class="btn btn--white">
+                        register
+                    
+                    </button>
+                    
+                </form>
+               </div>
+            </div>
+        </div>
+    
+    </body>
+
+    {% endblock %}
+
+  

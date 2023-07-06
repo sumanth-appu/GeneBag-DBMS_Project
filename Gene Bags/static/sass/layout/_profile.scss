@@ -1,0 +1,21 @@
+.profile{
+    height: 90vh;
+    box-shadow: 0 1rem 3rem $color-white;
+    list-style: none;
+    font-family: inherit;
+  
+
+}
+.profile_pic{
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 0 0.5rem 4rem $color-white;
+    position: relative;
+    border-radius: 300rem;
+}
+.profile_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}   

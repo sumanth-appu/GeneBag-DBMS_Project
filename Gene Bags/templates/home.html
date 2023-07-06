@@ -1,0 +1,400 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+        
+         <header class="header">
+            <div class="header__logo-box">
+                <img src="{{ url_for('static', filename = 'images/Logo.png') }}" alt=" Logo" class="header__logo">
+                </div>
+            
+            <div class="header__text-box">
+            
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main"> GENEBAGS</span>
+                    <span class="heading-primary--sub"> For your daily baggage </span>
+                  <span class="heading-primary--sub">
+                   {% include "_messages.html" %}
+                  </span>
+                </h1>
+
+                
+            </div>
+            </header>
+            <main>
+
+               
+                <section class="section_collection">
+                   <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">
+                            new arrivals
+                        </h2>
+                    </div>
+                    <div class="row">
+                       
+                        <div class="col-2-of-3 row">
+                                <div class="composition">
+                                    <img src="{{ url_for('static', filename = 'images/collection-one.jpg') }}   " alt="photo1" class="composition__photo composition__photo--p1">
+                                    <img src="{{ url_for('static', filename = 'images/collection-two.jpg') }}" alt="photo2" class="composition__photo composition__photo--p2">
+                                    <img src="{{ url_for('static', filename = 'images/collection-three.jpg') }}" alt="photo3" class="composition__photo composition__photo--p3">
+                                    <img src="{{ url_for('static', filename = 'images/collection-four.jpg') }}" alt="photo3" class="composition__photo composition__photo--p4">
+                                    <img src="{{ url_for('static', filename = 'images/collection-five.jpg') }}" alt="photo3" class="composition__photo composition__photo--p5">
+                                </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-tours">
+                    <div class="length">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">
+                         more of the products 
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--1">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>American Tourister</span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">American Tourister Casual bags</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the American Tourister Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back-1">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--2">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>Mona B Noah Canvas </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Recycled Backpack </li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the NOAH Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--2">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--3">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>sky bags for bagpacks.
+                                    </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Categories: Backpacks,   LAPTOP BAGS.</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the SKYBAGS Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--3">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-tour">
+                    <div class="length">
+                    
+                    <div class="row">
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--4">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>American Tourister</span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">American Tourister Casual bags</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the American Tourister Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back-1">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--5">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>Mona B Noah Canvas </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Recycled Backpack </li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the NOAH Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--2">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="cards__side cards__side--front">
+                                 <div class="cards__picture cards__picture--6">
+                                    &nbsp;
+                                 </div>
+                                <h4 class="cards__heading">
+                                    <span cards__heading-span cards__heading-span--1>sky bags for bagpacks.
+                                    </span>
+                                    
+                                </h4>
+                                 <div class="cards_details">
+                                   <ul class="cards_details-list">
+                                    <li class="cards_details-list cards_details-list--1">Categories: Backpacks,   LAPTOP BAGS.</li>
+                                    <li class="cards_details-list cards_details-list--2">Visit the SKYBAGS Store</li>
+                                    <li class="cards_details-list cards_details-list--3">hand bags</li>
+                                   </ul>
+                                 </div>
+                                </div>
+                                <div class="cards__side cards__side--back cards__side--back--3">
+                                    <div class="cards__cta">
+                                        <div class="cards__price-box">
+                                            for more
+                                        </div>
+                                        <a href="/product" class="btn btn--orange"> click here</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+               
+            </main>
+            <!-- 
+                            <div class="navigation"><input type="checkbox" class="navigation__check-box" id="navi-toggles">
+        
+                        <label for="navi-toggles" class="navigation__button-profile">
+                       
+                            <span class="navigation__link navigation__item">
+                                <img src="images/icon/icon-user.png" alt="">
+                            </span>
+                        </label>
+                        <div class="navigation__background1">
+                            &nbsp;
+                        </div> -->
+
+
+            <!-- <div class="popup" id="popup">
+                
+                <div class="popup__content popup__login">
+                   <div class="popup__login__form">
+                    <form action="#" class="form">
+                        <a href="#" class="popup__close"> &times;</a>
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h2 class="heading-secondary">
+                                   login/sign_in
+                            </h2>
+                        </div>
+                       
+                        <div class="popup__form__group">
+                            <input type="text" class="popup__form__input" placeholder="user_id " id ="name" required>
+                            <label for="user_id" class="popup__form__label"> user_id</label>
+                        </div>
+                        <div class="popup__form__group">
+                            <input type="text" class="popup__form__input" placeholder="password " id ="password" required>
+                            <label for="password" class="popup__form__label"> password</label>
+                        </div>
+
+                        <button class="btn btn--white">
+                            log_in
+                        </button>
+                        <div class="popup_submit_btn"><a href="#" class="sign_up">Forgot password/ </a> <a href="#signin" class="sign_up">Sign_up</a></div>
+                        
+                    </form>
+                   </div>
+                </div>
+            </div>
+
+            <div class="signin" id="signin">
+                
+                <div class="signin__content signin__login">
+                   <div class="signin__login__form">
+                    <form action="#" class="form">
+                        <a href="#popup" class="signin__close"> &times;</a>
+                        <div class="u-center-text .u-margin-bottom-small">
+                            <h2 class="heading-secondary">
+                                   user sign_up
+                            </h2>
+                        </div>
+                       
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="user_id " id ="user_id" required>
+                            <label for="user_id" class="signin__form__label"> user_id</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="Email " id ="Email" required>
+                            <label for="Email" class="signin__form__label"> Email</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="password " id ="password" required>
+                            <label for="password" class="signin__form__label"> password</label>
+                        </div>
+                        <div class="signin__form__group">
+                            <input type="text" class="signin__form__input" placeholder="confirm password " id ="confirm password" required>
+                            <label for="confirm password" class="signin__form__label"> confirm password</label>
+                        </div>
+                       
+
+                        <button class="btn btn--white">
+                            register
+                        
+                        </button>
+                        
+                    </form>
+                   </div>
+                </div>
+            </div> -->
+
+
+
+            
+
+           <!-- <section class="grid-test">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        col-1of-2
+                    </div>
+                    <div class="col-1-of-2">
+                        col-1of-2
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        col-1of-3
+                    </div>
+                    <div class="col-1-of-3">
+                        col-1of-3
+                    </div>
+                    <div class="col-1-of-3">
+                        col-1of-3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        col-1of-3
+                    </div>
+                    <div class="col-2-of-3">
+                        col-2of-3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-2-of-4">
+                        col-1of-4
+                    </div>
+                   
+                </div> <div class="row">
+                    <div class="col-1-of-4">
+                        col-1of-4
+                    </div>
+                    <div class="col-3-of-4">
+                        col-1of-4
+                    </div>
+                </div>
+            </section>
+        --> 
+        
+    </body>
+
+    {% endblock %}
+    
+   

@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<section class="section__sky" style="height:2REM">
+            <div class="navbar">
+                <a href="/home">Home</a>
+                <a href="/product">All Products</a>
+    
+                <div class="dropdown">
+                  <button class="dropbtn">BRANDS &nbsp;
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                  {% for brand in brands %}  
+                    <a href="{{url_for('get_brand', id=brand.id)}}">{{brand.name}}</a>
+                  {% endfor %}
+                  </div>
+                </div>
+              
+                  <a href="{{url_for('getCart')}}" tabindex="-1">cart(
+                    {% if session['total_cart_items'] %}
+                      {{session['total_cart_items']}}
+                    {% else %} 0 {% endif %}
+                    )</a>
+               
+                
+              </div>
+              {% include "_messages.html" %}
+          </section>
+
+
+        <section class="section__AT">
+          
+            <div class="row">
+            {% if brand %}
+               {% for b in brand %}
+
+            <div class="feature">
+                  <div class="feature-box">
+
+                            <img src="{{ url_for('static',filename = 'images/'+b.img) }}" class="pic" alt="{{b.bag_name}}">
+
+                        <div class="feature-box--dtls">
+                            products details
+                        </div>
+                        <div class="feature-box--price">
+                          <h5>Price: &nbsp; ${{b.price}}</h5>
+                          <p>Brand: &nbsp; {{b.brand}}</p>
+                        </div>
+                         <a href="{{url_for('details',id = b.bag_id)}}" class="btn-details">details</a>
+                        <form action = "{{url_for('AddCart')}}" method="post">
+                            <input type="hidden" name="bag_id" value="{{b.bag_id}}" />
+                            <button type="submit" class="btn--white btn">ADD TO CART</button>
+                            <lable for="">&nbsp; &nbsp; &nbsp;<h6 class="feature-box--dtls" style="display:inline-block;">Quantity:</h6></lable>
+                            <input type="number" name="quantity" id="" value="1" min="1" max="10" />
+                        </form>
+                        
+                       
+                    </div>
+                </div>
+                {% endfor %}
+
+            {% else %}
+
+            {% for bag in bags %}
+
+                <div class="feature">
+                  <div class="feature-box">
+                       
+                            <img src="{{ url_for('static',filename = 'images/'+bag.img) }}" class="pic" alt="{{bag.bag_name}}">
+                      
+                        <div class="feature-box--dtls">
+                            products details 
+                        </div>
+                        <div class="feature-box--price">
+                          <h5>Price: &nbsp; ${{bag.price}}</h5>
+                          <p>Brand: &nbsp; {{bag.brand}}</p>
+                        </div>
+                         <a href="{{url_for('details',id = bag.bag_id)}}" class="btn-details">details</a>
+                        <form action = "{{url_for('AddCart')}}" method="post">
+                            <input type="hidden" name="bag_id" value="{{bag.bag_id}}" />
+                            <button type="submit" class="btn--white btn">ADD TO CART</button>
+                            <lable for="">&nbsp; &nbsp; &nbsp;<h6 class="feature-box--dtls" style="display:inline-block;">Quantity:</h6></lable>
+                            <input type="number" name="quantity" id="" value="1" min="1" max="10" />
+                        </form> 
+                        
+                       
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+           
+        </section>
+      <!--   <section class="section__sky">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    guchii
+                </h2>
+            </div>
+        
+        </section>
+        <section class="section__AT">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    sky  bags
+                </h2>
+            </div>
+
+        </section>
+
+
+    </body> -->
+
+    {% endblock %}
+
+  

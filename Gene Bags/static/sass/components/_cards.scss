@@ -1,0 +1,150 @@
+.cards
+{
+    perspective: 150rem;
+    position: relative;
+    padding: 10rem;
+   
+
+    &__side{
+       
+        height: 60rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-Shadow ,.15);
+        
+       
+
+
+            &--front{
+                background-color:color-white;
+
+            }
+            &--back{
+                transform: rotateY(180deg);
+                
+                
+                &-1{
+                    background-image: linear-gradient(to right bottom,$color-card-3,$color-card-4);
+                }
+                &--2{
+                    background-image: linear-gradient(to right bottom ,rgba($color-card-3,0.85),rgba($color-card-4,0.85));
+                }
+                &--3{
+                    background-image: linear-gradient(to right bottom ,rgba($color-card-3,0.85),rgba($color-card-4,0.85));
+                }
+
+            }
+
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    //front side
+    &__picture{
+        background-size: cover;
+        height: 50rem;
+        background-blend-mode: screen;
+       
+
+
+
+        &--1{
+            background-image: url(../images/new-arrivals-1.jpg);
+            
+        }
+        &--3{
+            background-image: url(../images/new-arrivals-2.jpg);
+        }
+        &--2{
+            background-image: url(../images/new-arrivals-3.jpg);
+        }
+        &--4{
+            background-image: url(../images/new-arrivals-4.jpg);
+         
+        }
+        &--5{
+            background-image: url(../images/AT2.jpg);
+        }
+        &--6{
+            background-image: url(../images/collection-five.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+        
+        color: $color-chocolate;
+        position: absolute;
+        top: 40rem;
+        left: 2rem;
+        width: 85%;
+        
+    }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break:clone;
+        box-decoration-break:clone;
+
+
+        &--1{
+            background-image: linear-gradient(to right bottom ,rgba($color-span-1,.85),rgba($color-span-2,0.85));
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom ,rgba($color-card-3,0.85),rgba($color-card-4,0.85));
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom ,rgba($color-card-1,0.85),rgba($color-card-2,0.85));
+        }
+    }
+    
+
+    &__details{
+        padding: 3rem;
+      
+        &-list{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+        
+          
+        }
+
+        
+     } 
+
+     //back side 
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        text-align: center;
+    }
+    &__price-box{
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem ;
+        font-size: 4rem;
+        font-weight: 100;
+        text-transform:uppercase;
+    }
+  
+    
+}

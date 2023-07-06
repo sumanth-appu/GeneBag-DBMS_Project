@@ -1,0 +1,34 @@
+.header{
+    height:95vh;
+    background-image: linear-gradient(to right bottom,$color-primary,$color-primary-dark),url(../images/background2.jpg);
+    background-size: cover;
+    background-position: top;
+    _webkit_clip-path: polygon(0 0,100% 0, 100% 75vh,50% 100% ,0 75vh);
+    clip-path: polygon(0 0,100% 0, 100% 75vh,0 100%);
+    position: relative;
+
+   
+   &__logo{
+    position: absolute;
+    max-height: 22rem;
+    left: 2rem;
+    display: inline;
+
+    &-box{
+      position: absolute;
+      height: 2rem;
+      display: inline;
+  }
+   }
+    
+    &__text-box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+}
+
+

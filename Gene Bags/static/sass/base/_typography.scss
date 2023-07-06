@@ -1,0 +1,80 @@
+.heading-primary{
+    color:$color-white;
+    text-transform: uppercase;
+
+    &--main{
+        display: block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInleft;
+        animation-duration: 5s;
+        animation-timing-function:ease-out;
+    
+    }
+    &--sub{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation-name: moveInright;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    margin-bottom: 1.5rem;
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image:linear-gradient(to right,
+   $color-white,$color-light-cream
+   
+    );
+    border-bottom: 0.05rem solid $color-white;
+    display:inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+    letter-spacing: .2rem;
+    margin-top: 2rem;
+
+
+
+    &:hover{
+        transform: skewY(2deg ) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem  2rem rgba(58, 68, 86, 0.208);
+        letter-spacing: 0.5rems;
+    }
+
+}
+
+.heading_tertiary{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-image:linear-gradient(to right,
+   $color-white,$color-white);
+    border-bottom: 0.05rem solid $color-white;
+    display:inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+    letter-spacing: .2rem;
+    margin-top: 2rem;
+     margin-bottom: 2rem;
+
+}
+
+
+body{
+    font-family: "lato",sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-white;
+    padding: 2rem;
+    
+}
+

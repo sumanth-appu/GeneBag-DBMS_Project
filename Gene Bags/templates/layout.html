@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/icon.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+        <link rel="shortcut icon" type="image.png" href="{{ url_for('static', filename = 'images/Logo1.png') }}">
+        <title>Gene bag | Exclusive for Bag shopping </title> 
+    </head>
+    <body>
+
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__check-box" id="navi-toggle">
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">
+                        &nbsp;
+                    </span>
+                </label>
+                <div class="navigation__background">
+                    &nbsp;
+                </div>
+
+                <nav class="navigation__nav">
+                    <ul class="navigation__list"> 
+                     
+                    
+                    {% if session['loggedin'] %}
+                    <li class="navigation__item"><a href="/home" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-home.png') }}" alt=""></span>home </a></li>
+                    {% else %}
+                    <li class="navigation__item"><a href="/" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-home.png') }}" alt=""></span>home </a></li>
+                    {% endif %}
+                    <li class="navigation__item"><a href="/cart" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-cart.png') }}" alt=""></span>my cart</a></li>
+                    <li class="navigation__item"><a href="/product" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-product.png') }}" alt=""></span>products</a></li>
+                    {% if session['loggedin'] %}
+                     <li class="navigation__item"><a href="/profile" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-user.png') }}" alt=""></span>profile</a></li>
+                    {% endif %}
+                    <li class="navigation__item"><a href="/about" class="navigation__link"><span><img src="{{ url_for('static', filename = 'images/icon/icon-about us.png') }}" alt=""></span>about us</a></li>
+               
+                </ul>
+            </nav>
+        </div>
+
+
+
+{% block body %}    {% endblock %}
+
+
+
+<footer class="footer">
+        <div class="footer__logo-box">
+            <img src="{{ url_for('static',filename = 'images/Logo.png') }}" alt="" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-2-of-3">
+               <div class="footer__navigation">
+                <ul class="footer__list">
+                    <div class="row">
+                        <div class="col-1-of-4-footer">
+                            <li class="footer__item"><a href="/terms" class="footer__link"> Terms</a></li>
+                            
+                        </div>
+                        <div class="col-1-of-4-footer">
+                            <li class="footer__item"><a href="/contact" class="footer__link"> contact us</a></li>
+                        </div>
+                    
+                        <div class="col-1-of-4-footer">
+                            <li class="footer__item"><a href="/feedback" class="footer__link">feed back </a></li>
+                        </div>
+                        <div class="col-1-of-4-footer">
+                            <li class="footer__item"><a href="/copyrights" class="footer__link"> copyrights</a></li>
+                        </div>
+                        <div class="col-1-of-4-footer">
+                            <li class="footer__item"><a href="/about" class="footer__link"> About us </a></li>
+                        </div>
+                    </div>
+                </ul>
+               </div>
+
+            </div>
+            <div class="col-1-of-3">
+                <p class="footer_copyright">
+                    Built my <a href="#" class="footer__link">GENEBAGS</a> for my DBMS-miniproject. Copyright &copy;by Chandan Girish Patil and Chandan N . You sre not allows to use this page As this page is only ment for the DBMS-mini project.  
+                </p>
+        
+            </div>
+        </div>
+    </footer>
+</html>

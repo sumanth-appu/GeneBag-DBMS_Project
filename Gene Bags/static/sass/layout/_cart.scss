@@ -1,0 +1,93 @@
+.cart
+{
+   width:max-content;
+   font-family: inherit;    
+   position: relative;
+
+    &-table{
+        width:160vh;
+        height:40vh;
+        border-color: $color-white;
+        border-bottom: 0.2rem solid $color-white;
+        font-family: inherit;
+        text-decoration: none;
+        font-weight: 300;
+        text-align: center;
+            &-row{
+                border-bottom: 0.2rem solid $color-white;
+            }
+
+            &-heading
+            {
+                width: 50vh;
+            }
+            &-box--dtls{
+                font-family: inherit;
+                font-size: large;
+                color: $color-white;
+                text-transform: uppercase;
+                font-weight: 300;
+                padding-bottom: 2.7rem;
+                list-style: none;
+            }
+    }
+     &-img{
+        width:15vh;
+        height:15vh;
+     }
+     &-btn{
+
+        text-align: left;
+     }
+
+}
+.table{
+    
+
+    &-heading{
+        font-family: inherit;
+        text-decoration: none;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.cart__container{
+    margin-left: 5rem;
+    width: 90%;
+    height: 65rem;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 1rem 3rem $color-white;
+   }
+   .out-table{
+    position: absolute;
+    top:110vh;
+    left:3rem;
+   }
+   .out-check{
+    position: absolute;
+    top:110vh;
+    right:-50rem;
+   }
+   .Total-quantity{
+    position: absolute;
+    bottom :-8rem;
+    left:20rem ;
+}
+.total{
+    position: absolute;
+    bottom :-8rem;
+    left:80rem ;
+}
+.total-price{
+    position: absolute;
+    bottom :-16rem;
+    left:20rem ;
+
+}
+.price{
+    position: absolute;
+    bottom :-16rem;
+    left:80rem ;
+}

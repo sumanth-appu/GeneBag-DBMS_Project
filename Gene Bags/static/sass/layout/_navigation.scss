@@ -1,0 +1,281 @@
+.navigation{
+
+
+    &__check-box{
+        display:none;
+    }
+
+    &__button{
+        background-color: $color-white;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        box-shadow: 0 1rem 3rem rgba($color-Shadow,0.5);
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+
+    }
+    &__button-profile{
+        background-color: inherit;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 3rem;
+        left: 12rem;
+        font-size:3rem ;
+       
+        z-index: 2000;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover,&:active{
+            background-position: 100% ;
+            color: $color-white;
+            transform: translateX(1rem);
+            border-radius: 2.5rem;
+        }
+
+    }
+    &__background{
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5.5rem;
+        right: 5.5rem;
+        background-image: radial-gradient($color-nav, $color-nav-dark);
+        z-index: 1000;
+        transition: transform .8s  cubic-bezier(0,.53,0,1.3);
+
+
+        //transform: scale(80);
+    }
+    &__background1{
+        height: 5rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: -6rem;
+        right:32rem;
+        
+        z-index: 1000;
+        transition: transform .8s  cubic-bezier(0,.53,0,1.3);
+
+
+        //transform: scale(80);
+    }
+    &__nav{
+        height: 100vh;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        visibility: hidden;
+
+        transition: all 1s cubic-bezier(.39,.07,.11,1.08);
+
+    }
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+
+
+        &-profile{
+            position: absolute;
+            top: 10rem;
+            left: 40rem;
+            width: 80vh;
+            
+            height: 80vh;
+            padding: 6rem;
+            box-shadow: 0 1rem 2rem rgba($color-Shadow,0.85);
+        }
+    }
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image:linear-gradient(-120deg,$color-nav 50%,$color-chocolate 50%,rgba(255, 255, 255, 0)) ;
+            background-size: 225%;
+            transition: all .5s ease;
+
+            span{
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+    
+
+        }
+        &:hover,&:active{
+            background-position: 100% ;
+            color: $color-white;
+            transform: translateX(1rem);
+            border-radius: 2.5rem;
+        }
+
+    }
+    &__item{
+        margin: 1rem;
+    }
+
+    &__check-box:checked ~ &__background{
+            transform: scale(80);
+    }
+    &__check-box:checked ~ &__nav{
+       opacity: 1;
+       width: 150%;
+       visibility: visible;
+}
+&__check-box:checked ~ &__background1{
+    transform: scale(80);
+}
+
+
+///icon
+
+    &__icon{
+
+        position: relative;
+        margin-top: 2.8rem;
+
+        &,
+        &::before,
+        &::after{
+            width: 3rem;
+            height: 2px;
+            background-color: rgba($color-nav,0.5);
+            display: inline-block;
+        }
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left:0;
+            transition: all 0.2s;
+
+
+        }
+        &::before{
+            top: -.8rem;
+        }
+        &::after{
+                top:.8rem;
+        }
+
+    }
+    &__button:hover &__icon::before{
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+    &__check-box:checked + &__button &__icon{
+        background-color: transparent;
+    }
+    &__check-box:checked + &__button &__icon::before{
+        top: 0;
+      transform: rotate(-135deg);
+    }
+    &__check-box:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(135deg);
+      }
+}
+
+.user{
+    font-size: 3rem;
+    font-weight: 300;
+}
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    font-family: inherit;
+    text-transform: uppercase;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-image: linear-gradient(to left bottom,$color-nav,$color-nav-dark);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

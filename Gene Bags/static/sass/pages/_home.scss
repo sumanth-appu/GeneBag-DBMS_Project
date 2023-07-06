@@ -1,0 +1,144 @@
+.section_collection{
+  
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}
+
+.section-tours{
+    padding: 20rem 0;
+    height: 100rem;
+    background-image: linear-gradient(to left bottom,$color-nav ,$color-nav-dark),url(../images/background3.jpg);
+    background-size:contain;
+    clip-path: polygon(0 20vh,100% 0,100% 100%,0 100%);
+    margin-top: -20vh;
+}
+.section__AT{
+    background-image: linear-gradient(to left bottom,$color-nav,$color-nav-dark);
+    background-size: contain;
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}
+.section__login{
+    
+    background-image: linear-gradient(to left bottom,$color-primary,$color-primary-dark),url(../images/background-login.jpg);
+    background-size: contain;
+    height: 100vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    
+   
+}
+.section_signup{
+    background-image: linear-gradient(to left bottom,rgba($color-nav,1),rgba($color-nav-dark,1)),url(../images/background-signup.jpg);
+    background-size: contain;
+    height: 145vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    position: relative;
+
+}
+.section_cart{
+    background-image: linear-gradient(to left bottom,$color-nav,$color-nav-dark);
+    padding: 30rem 0;
+    padding-top: 10rem;
+
+   
+}
+.section__sky{
+  
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}
+
+.section-tour{
+    padding: 30rem 0;
+    height: 100rem;
+    background-image: linear-gradient(to left bottom,$color-nav-dark ,$color-nav),url(../images/background3.jpg);
+    background-size:contain;
+    border-top: 2rem solid $color-white;
+    
+    margin-top: -20vh;
+}
+
+.section_feed{
+    height: 250vh;
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}
+
+.section_details{
+  
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    height: 150vh;
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}
+.section_profile{
+    height: 100vh;
+    background-image: linear-gradient(to left bottom,rgba($color-card-3,1),rgba($color-card-4,1)),url(../images/background-signup.jpg);
+   background-size: cover;
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: 0vh;
+    position: relative;
+   
+}
+.section_about{
+    background-image: linear-gradient(to left bottom,rgba($color-nav,1),rgba($color-nav-dark,1)),url(../images/background-signup.jpg);
+    background-size: contain;
+    height: 180vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    position: relative;
+
+}
+.section_contact{
+    background-image: linear-gradient(to left bottom,rgba($color-card-3,1),rgba($color-card-4,1)),url(../images/background-signup.jpg);
+    background-size: contain;
+    height: 150vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    position: relative;
+
+}
+.section_terms{
+    background-image: linear-gradient(to left bottom,rgba($color-nav,1),rgba($color-nav-dark,1)),url(../images/background-signup.jpg);
+    background-size: contain;
+    height: 400vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    position: relative;
+
+
+}
+.section_copyrights{
+    background-image: linear-gradient(to left bottom,rgba($color-nav,1),rgba($color-nav-dark,1)),url(../images/background-signup.jpg);
+    background-size: contain;
+    height: 200vh;
+    padding: 30rem 0;
+    padding-top: 5rem;
+    position: relative;
+
+}
+.section_payment{
+  
+    background-image: linear-gradient(to left bottom,$color-card-3,$color-card-4);
+    height: 150vh;
+    padding: 30rem 0;
+    padding-top: 15rem;
+    margin-top: -20vh;
+   
+}

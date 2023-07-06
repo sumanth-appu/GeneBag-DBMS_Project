@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+        <section class="section_about">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                   about us
+                </h2>
+                
+            </div>
+
+        <div class="Aboutpage" style="margin: 0 20rem;">
+        <p><h4 class="table-heading">This About page is just for our 'DBMS mini-project'. we have teamed up in two in order to complete this project.
+        So let me tell the details of our project ,our project title is "ONLINE_BAG SHOPPING SYSTEM". We started building our web
+        site at last week of 2022, we managed to complete it by the end of january 2023. So that almost one month of time.</h4></p>
+        <p class="heading_tertiary">Who we are !!!!!</p>
+        <br>
+        <br>
+        <p class="table-heading">We are the students of "ACHARYA INSTITUTE TECHNOLOGY" persuing our Bachulor Degree in engineering.
+            In order to complete this project we took up reference from Udemy platform and Youtube. we decided our website name as &nbsp;  "GENEBAGS" &nbsp;.
+            On this website we sell some of the best brands of the bags like AMERICAN TOURISTER , SKYBAGS, GUCCI AND more.</p>
+        <p class="heading_tertiary">brief intro to website</p> 
+        <br>
+        <br>
+        <p class="table-heading">when we visit our website we first see our genebags home  page. where you can find logo website name and a login button .
+            As we scroll down you can see some of the new collection of our shop. further moving Down you will find  some of our products u can see them , and 
+            hover over  the products The products will flip and  there you will find a button , click on that, 
+            if you didn't logged in to our page means or If you are a new user means you will be redirected towards the login page,else more product will display
+            and in home page itself you can find a option to login your can login to our website from there . we have fixed navigation button which will take
+            care of all Kind of navigation of our website. In our site we have product page , cart page , details page , feedback page,login page , signup page. 
+        </p> 
+        <br>
+        <br>
+        {% if session['loggedin'] %}
+        <a href="/home" class="btn btn--orange" style="align-items: center;"> visit site</a>
+        {% else %}
+        <a href="/" class="btn btn--orange" style="align-items: center;"> visit site</a>
+        {% endif %}
+        </div>
+        </section>
+       
+    </body>
+
+
+
+   {% endblock %}

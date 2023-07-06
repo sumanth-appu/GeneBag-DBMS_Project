@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    
+
+<section class="section__AT" style="height:2REM">
+            <div class="navbar">
+                <a href="/home">Home</a>
+                <a href="/product">All Products</a>
+    
+                <div class="dropdown">
+                  <button class="dropbtn">BRANDS &nbsp;
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                  {% for brand in brands %}  
+                    <a href="{{url_for('get_brand', id=brand.id)}}">{{brand.name}}</a>
+                  {% endfor %}
+                  </div>
+                </div>
+              
+                   <a href="{{url_for('getCart')}}" tabindex="-1">cart(
+                    {% if session['total_cart_items'] %}
+                      {{session['total_cart_items']}}
+                    {% else %} 0 {% endif %}
+                    )</a>
+               
+                
+              </div>
+          </section>
+        <section class="section_details">
+            
+                <div class="cart__container">
+                    
+                    <div class="pic1">
+                        <img src="{{ url_for('static',filename = 'images/'+product.img) }}" alt="{{product.bag_name}}" style="margin:3rem" width="500" height="500">
+                    </div>
+                   
+
+                    <div class="products_details " style="position: absolute; top:3rem; right:3rem;width:60vh;">
+                         <h3 class="heading_tertiary" style="font-weight: 700;">Details</h3>
+                       <h4 style="font-weight: 300;">Product Name: &nbsp; {{product.bag_name}}</h4>
+                        <h4 style="font-weight: 300;">Product Brand: &nbsp; {{product.brand}}</h4>
+                       <hr>
+                       <p>Product Price: &nbsp; ${{product.price}}</p>
+                       <hr>
+                       <b> Product Discription</b>
+                       <p>{{product.desc}}</p>
+
+                    </div>
+                    <div class="products_details " style="position: absolute; top:60vh; right:3rem;width:60vh;">
+                        <form action = "{{url_for('AddCart')}}" method="post">
+                            <input type="hidden" name="bag_id" value="{{product.bag_id}}" />
+                            <button type="submit" class="btn--white btn">ADD TO CART</button>
+                            <lable for="">&nbsp; &nbsp; &nbsp;Quantity:</lable>
+                            <input type="number" name="quantity" id="" value="1" min="1" max="10" />
+                        </form> 
+                   </div>
+              
+                  
+                </div>
+               
+        </section>
+
+
+
+
+    </body>
+
+    {% endblock %}
+
+
+   

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <a href="/product" class="signin__close">&times;</a>
+        <section class="section_cart">
+            <div class="row">
+                <div class="feature">
+                    <h2 class="heading-secondary">
+                        Shopping cart
+                        </h2>
+                <div class="cart-btn ">
+                    {% if cart_items or len(cart_items)!=0 %}
+                    <a href="{{ url_for('empty_cart') }}" class="btn-details btn--orange" >Empty All</a>
+               
+                </div>               
+                </div>
+            </div>
+            <div class="row">
+                <div class="cart">
+                   <table class="cart-table">
+                   
+                        <thead class="cart-table-head">
+                            <tr class="cart-table-row">
+                                <th class="table-heading">Product</th>
+                                <th class="table-heading">Quantity </th>
+                                <th class="table-heading">unit prize</th>
+                                <th class="table-heading">price</th>
+                                <th class="table-heading"> &nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in cart_items %}
+                            {% set quantity = item['quantity'] %}
+                            {% set item_price = item['price'] // item['quantity'] %}
+                            {% set total_price = item['price'] %}
+                             <tr class="cart-table-row">
+                                <td class="table-details"><img src="{{ url_for('static', filename = 'images/'+item['img']) }}" alt="" class="cart-img"> 
+                                    <div class="table-box--dtls">
+                                       {{item['bag_name']}}
+                                    </div>
+                                 </td>
+                                <td class="table-details">{{quantity }} </td>
+                                <td class="table-details">${{ item_price }}</td>
+                                <td class="tabel-details">${{ total_price }}</td>
+                                <td> <a href="{{ url_for('delete_product', id = item['bag_id']) }}" class="btn-details" >Remove </a>
+                                </td>
+                            </tr> 
+                        {% endfor %}
+                      
+                       
+                          
+                            
+                       
+
+                       </tbody>
+                       <h3 class="Total-quantity heading_tertiary">Total Quantity</h5>
+                       <h3 class="total heading_tertiary">{{ cart_data['total_quantity'] }}</h5></td>
+
+                      
+                        <h3 class="total-price heading_tertiary">Total</h3>
+                        <h5 class="price heading_tertiary">${{ cart_data['total_price'] }}</h5>
+                    
+                       <a href="{{url_for('product')}}"  class="btn--white btn out-table">Continue Shopping</a>
+                       <a href="{{url_for('checkout')}}" class="btn--white btn out-check">Checkout</a>
+                       
+                   </table>
+                    {% else: %}
+                    <div class="">Your Cart is Empty...!</div>
+                    {% endif %}
+                </div>
+            </div>
+       
+
+        </section>
+
+    </body>
+
+
+   {% endblock %}
